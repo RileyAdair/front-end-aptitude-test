@@ -1,0 +1,16 @@
+<!-- Home Template -->
+<section class="movies-container">
+  <div class="movie-item animate" ui-sref="movie({id: movie.id})" ng-repeat="movie in movies">
+    <div class="image-content">
+      <img class="movie-poster" ng-src="{{imageUrl + movie.poster_path}}" alt="">
+      <img class="movie-backdrop" ng-src="{{imageUrl + movie.backdrop_path}}" alt="">
+    </div>
+    <div class="item-content">
+      <h4>{{movie.title}}</h4>
+      <div class="item-rating">
+        {{movie.vote_average}}
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</section>

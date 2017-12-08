@@ -1,0 +1,38 @@
+<!-- Movie Template -->
+<section class="movie-container">
+  <img class="movie-background" ng-src="{{imageUrl + movie.backdrop_path}}" alt="">
+  <div class="title-container">
+    <div class="content-width">
+      <h3 class="header movie-title">{{movie.title}}</h3>
+      <p class="tag-line">{{movie.tagline}}</p>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="content-width">
+      <div class="flex-content">
+        <div class="image-container">
+          <img class="movie-image" ng-src="{{imageUrl + movie.poster_path}}" alt="">
+        </div>
+        <div class="description-container">
+          <div class="content-section">
+            <h3 class="header">Overview</h3>
+            <p>{{movie.overview}}</p>
+          </div>
+          <div class="flex-content">
+            <div class="content-section description">
+              <h3 class="header">Release Date</h3>
+              <p>{{movie.release_date}}</p>
+            </div>
+            <div class="content-section">
+              <h3 class="header">Vote Average</h3>
+              <p>{{movie.vote_average}}</p>
+            </div>
+          </div>
+          <button class="btn" ng-click="tweet(movie.title)">
+            Share on Twitter <i class="fa fa-twitter"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

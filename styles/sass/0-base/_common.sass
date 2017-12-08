@@ -1,0 +1,97 @@
+// COMMON STYLES
+
+@font-face
+  font-family: 'gilroy-bold'
+  src: url('../../../assets/fonts/gilroy-extrabold-webfont.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'gilroy-light'
+  src: url('../../../assets/fonts/gilroy-light-webfont.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+html, body
+  width: 100%
+
+body
+  font-family: $font-stack-light
+  background: #F4F4F4
+  color: $charcoal
+  line-height: 1.4
+
+.content-width
+  width: 88%
+  margin: 0 auto
+
+.btn
+  color: #fff
+  cursor: pointer
+  display: inline-block
+  font-weight: 500
+  text-align: center
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+  border: 0
+  border-radius: 5px
+  padding: 12px 13px 13px
+  transition: all .2s ease
+  letter-spacing: .25px
+  min-width: 130px
+  white-space: normal
+  text-transform: uppercase
+  line-height: 1.6
+  vertical-align: middle
+  background: linear-gradient(to right, #49ACDA,#64A2F8)
+  box-shadow: 0 8px 34px 4px rgba(0,0,0,.1)
+
+.btn:hover
+  transform: scale(1.05)
+
+.btn:active, .btn:focus
+  outline: none
+  box-shadow: none
+  border: none
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background: #1e1e1e
+  padding: 15px 0
+  z-index: 100
+
+.logo
+  color: #fff
+  letter-spacing: .25px
+  cursor: pointer
+
+.gold
+  color: $gold
+  font-family: $font-stack-bold
+
+footer
+  background: #1e1e1e
+  color: $gold
+  padding: 20px 0
+  font-size: 14px
+
+.footer-content
+  display: flex
+  justify-content: space-between
+
+@media all and (min-width: 1024px)
+  .content-width
+    width: 90%
+    max-width: 1400px
+
+  .flex-content
+    width: 100%
+    display: flex

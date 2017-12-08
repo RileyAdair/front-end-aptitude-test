@@ -1,0 +1,73 @@
+// HOME STYLES
+
+.movies-container
+  width: 100%
+  height: auto
+  position: relative
+  margin-top: 56px
+  padding: 0 0 10%
+
+.movie-item
+  width: 100%
+  position: relative
+  margin-bottom: 32px
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+  cursor: pointer
+  opacity: 0
+  transform: scale(1.05)
+  transition: all .25s ease-out
+
+  &:hover
+    transform: translateY(-2px)
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15)
+
+.image-content
+  width: 100%
+
+.movie-backdrop
+  width: 100%
+  height: auto
+
+.movie-poster
+  display: none
+
+.item-content
+  position: relative
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding: 6%
+  margin-top: -4px
+  background: #fff
+
+@media all and (min-width: 768px)
+  .movies-container
+    width: 90%
+    margin: 56px auto 0
+    display: grid
+    grid-template-columns: 48% 48%
+    grid-gap: 3%
+    padding: 6% 0
+
+  .movie-item
+    margin-bottom: 6%
+
+  .movie-backdrop
+    display: none
+
+  .movie-poster
+    display: block
+    width: 100%
+    height: auto
+
+  .item-content
+    position: absolute
+    bottom: 0
+
+@media all and (min-width: 1024px)
+  .movies-container
+    grid-template-columns: 31.3333% 31.3333% 31.3333%
+    grid-gap: 3%
+
+  .movie-item
+    margin-bottom: 10%
