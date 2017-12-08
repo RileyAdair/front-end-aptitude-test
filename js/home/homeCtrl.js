@@ -4,15 +4,14 @@ app.controller('homeCtrl', function($scope, homeSrvc){
   // Get top rated movies in homeSrvc
   homeSrvc.getTopRated()
     .then(function(response) {
-      console.log(response.data.results);
       $scope.movies = response.data.results;
     })
 
-    // animate movie-items
-    function animate(){
-      TweenMax.staggerTo(".movie-item", .23, {opacity:1, scale:1}, 0.2);
-    }
-    setTimeout(function(){
-      animate()
-    }, 300);
+  // animate movie-items
+  function animate(){
+    TweenMax.staggerTo(".movie-item", .23, {opacity:1, scale:1}, 0.2);
+  }
+  setTimeout(function(){
+    animate()
+  }, 300);
 });

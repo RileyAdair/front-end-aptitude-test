@@ -7,5 +7,4 @@ app.service('movieSrvc', function($http){
     return $http
       .get(apiUrl + 'movie/' + id + apiKey + '&append_to_response=reviews,videos')
   }
-
 });

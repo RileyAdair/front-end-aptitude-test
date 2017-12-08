@@ -4,7 +4,6 @@ app.controller('movieCtrl', function($scope, $stateParams, movieSrvc){
   // Get movie details from movieSrvc
   movieSrvc.getMovieDetails($stateParams.id)
     .then(function(response) {
-      console.log(response.data);
       $scope.movie = response.data;
     })
 
@@ -12,5 +11,4 @@ app.controller('movieCtrl', function($scope, $stateParams, movieSrvc){
     // Opens new window to tweet about the movie
     window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('Wanna watch "' + title + '" and chill?'));
   };
-
 });
