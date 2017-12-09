@@ -1,1 +1,0 @@
-app.controller("homeCtrl",function(t,e){function o(){TweenMax.staggerTo(".movie-item",.23,{opacity:1,scale:1},.2)}t.imageUrl="http://image.tmdb.org/t/p/w780",e.getTopRated().then(function(e){console.log(e.data.results),t.movies=e.data.results}),setTimeout(function(){o()},300)});
